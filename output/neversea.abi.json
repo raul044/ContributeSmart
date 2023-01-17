@@ -1,0 +1,137 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.66.0-nightly",
+            "commitHash": "1898c34e923bad763e723c68dd9f23a09f9eb0fc",
+            "commitDate": "2022-10-26",
+            "channel": "Nightly",
+            "short": "rustc 1.66.0-nightly (1898c34e9 2022-10-26)"
+        },
+        "contractCrate": {
+            "name": "neversea",
+            "version": "0.0.0",
+            "git_version": "16afca3-modified"
+        },
+        "framework": {
+            "name": "elrond-wasm",
+            "version": "0.36.0"
+        }
+    },
+    "name": "Neversea",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "fund_issuer",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "EGLD"
+            ],
+            "inputs": [
+                {
+                    "name": "git_id",
+                    "type": "utf-8 string"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "register_issue",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "issue_id",
+                    "type": "utf-8 string"
+                },
+                {
+                    "name": "git_id",
+                    "type": "utf-8 string"
+                },
+                {
+                    "name": "reward",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "register_hunter",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "git_id",
+                    "type": "utf-8 string"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "claim_reward",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "issue_id",
+                    "type": "utf-8 string"
+                },
+                {
+                    "name": "git_id",
+                    "type": "utf-8 string"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getIssueRewards",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<utf-8 string,BigUint>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "getIssuerFunds",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<utf-8 string,BigUint>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "getHunterWallets",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<utf-8 string,Address>>",
+                    "multi_result": true
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "identifier": "update",
+            "inputs": [
+                {
+                    "name": "from",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "updated",
+                    "type": "tuple<BigUint,BigUint>"
+                }
+            ]
+        }
+    ],
+    "hasCallback": false,
+    "types": {}
+}
