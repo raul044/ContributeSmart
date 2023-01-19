@@ -1,5 +1,5 @@
 [package]
-name = "neversea-wasm"
+name = "contribute-wasm"
 version = "0.0.0"
 authors = [ "you",]
 edition = "2018"
@@ -20,7 +20,7 @@ lto = true
 debug = false
 panic = "abort"
 
-[dependencies.neversea]
+[dependencies.contribute]
 path = ".."
 
 [dependencies.elrond-wasm-node]

@@ -1,12 +1,12 @@
 [package]
-name = "neversea"
+name = "contribute"
 version = "0.0.0"
 authors = [ "you",]
 edition = "2018"
 publish = false
 
 [lib]
-path = "src/neversea.rs"
+path = "src/contribute.rs"
 
 [dependencies.elrond-wasm]
 version = "0.36.0"

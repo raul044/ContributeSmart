@@ -8,16 +8,16 @@
             "short": "rustc 1.66.0-nightly (1898c34e9 2022-10-26)"
         },
         "contractCrate": {
-            "name": "neversea",
+            "name": "contribute",
             "version": "0.0.0",
-            "git_version": "16afca3-modified"
+            "git_version": "c443cbc-modified"
         },
         "framework": {
             "name": "elrond-wasm",
-            "version": "0.36.0"
+            "version": "0.36.1"
         }
     },
-    "name": "Neversea",
+    "name": "Contribute",
     "constructor": {
         "inputs": [],
         "outputs": []
@@ -50,7 +50,7 @@
                     "type": "utf-8 string"
                 },
                 {
-                    "name": "reward",
+                    "name": "bounty",
                     "type": "BigUint"
                 }
             ],
@@ -68,13 +68,24 @@
             "outputs": []
         },
         {
-            "name": "claim_reward",
+            "name": "claim_bounty",
             "mutability": "mutable",
             "inputs": [
                 {
                     "name": "issue_id",
                     "type": "utf-8 string"
                 },
+                {
+                    "name": "hunter_git_id",
+                    "type": "utf-8 string"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "claim_fund",
+            "mutability": "mutable",
+            "inputs": [
                 {
                     "name": "git_id",
                     "type": "utf-8 string"
@@ -83,7 +94,7 @@
             "outputs": []
         },
         {
-            "name": "getIssueRewards",
+            "name": "getIssuebounties",
             "mutability": "readonly",
             "inputs": [],
             "outputs": [
@@ -100,6 +111,17 @@
             "outputs": [
                 {
                     "type": "variadic<multi<utf-8 string,BigUint>>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "getIssuerWallets",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<multi<utf-8 string,Address>>",
                     "multi_result": true
                 }
             ]

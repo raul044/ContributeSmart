@@ -1,3 +1,3 @@
 fn main() {
-    elrond_wasm_debug::meta::perform::<neversea::AbiProvider>();
+    elrond_wasm_debug::meta::perform::<contribute::AbiProvider>();
 }

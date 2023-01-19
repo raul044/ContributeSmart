@@ -5,13 +5,15 @@
 #![no_std]
 
 elrond_wasm_node::wasm_endpoints! {
-    neversea
+    contribute
     (
-        claim_reward
+        claim_bounty
+        claim_fund
         fund_issuer
         getHunterWallets
-        getIssueRewards
+        getIssuebounties
         getIssuerFunds
+        getIssuerWallets
         register_hunter
         register_issue
     )

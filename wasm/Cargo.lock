@@ -44,6 +44,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "contribute"
+version = "0.0.0"
+dependencies = [
+ "elrond-wasm",
+]
+
+[[package]]
+name = "contribute-wasm"
+version = "0.0.0"
+dependencies = [
+ "contribute",
+ "elrond-wasm-node",
+ "elrond-wasm-output",
+]
+
+[[package]]
 name = "elrond-codec"
 version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -185,22 +201,6 @@ name = "memory_units"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8452105ba047068f40ff7093dd1d9da90898e63dd61736462e9cdda6a90ad3c3"
-
-[[package]]
-name = "neversea"
-version = "0.0.0"
-dependencies = [
- "elrond-wasm",
-]
-
-[[package]]
-name = "neversea-wasm"
-version = "0.0.0"
-dependencies = [
- "elrond-wasm-node",
- "elrond-wasm-output",
- "neversea",
-]
 
 [[package]]
 name = "nibble_vec"
